@@ -1,12 +1,12 @@
 # Composing Music With Recurrent Neural Networks
 
-This repo is a replication work of [**Biaxial RNN music composition**](https://www.danieldjohnson.com/2015/08/03/composing-music-with-recurrent-neural-networks/) by Daniel D. Johnson in 2015. In our work, we used tensorflow and keras to rebuild his model, and achieve the goal to generate classical pieces. The report can be found [here](https://github.com/ChengweiWang3210/Music_generator_LSTM/blob/main/E4040.2020Fall.QMSS.report.yl4318.yl4319.cw3210.pdf). 
+This repo is a replication work of [**Biaxial RNN music composition**](https://www.danieldjohnson.com/2015/08/03/composing-music-with-recurrent-neural-networks/) by Daniel D. Johnson in 2015. In our work, we used tensorflow and keras to rebuild his model, and achieve the goal to generate classical pieces. The report can be found [here](https://github.com/ChengweiWang3210/Music_generator_LSTM/blob/master/E4040.2020Fall.QMSS.report.yl4318.yl4319.cw3210.pdf). 
 
 **Note**: we stored our trained model weitghts in google drive, as it is too large for github repo. Here is the [link](https://drive.google.com/drive/folders/1N-pdq5LiT7ppJ2DnkrYrtmAZT4fX7J4s?usp=sharing). Thank you! 
 
 ### 1. How to run the code
 
-The major part of our work -- the model itself can be found in the notebook file: [trainmodel.ipynb](https://github.com/ecbme4040/e4040-2020Fall-Project-QMSS-yl4318-yl4319-cw3210/blob/main/trainmodel.ipynb). 
+The major part of our work -- the model itself can be found in the notebook file: [trainmodel.ipynb](https://github.com/ChengweiWang3210/Music_generator_LSTM/blob/master/trainmodel.ipynb). 
 
 The model has already been constructed in the identical structure as the original work, with 2 layers of LSTM for time axis (each layer has 300 hidden units) and 2 layers of LSTM for note axis (respectively have 100 and 50 hidden units in these 2 layers.)
 
@@ -32,7 +32,7 @@ We also has two python file assisting the data transformation and customizing ne
 
 #### 2.1 Data.py
 
-In the [data.py](https://github.com/ecbme4040/e4040-2020Fall-Project-QMSS-yl4318-yl4319-cw3210/blob/main/data.py) file, we built three functions here.
+In the [data.py](https://github.com/ChengweiWang3210/Music_generator_LSTM/blob/master/data.py) file, we built three functions here.
 
 The first one is ```toArray()```, which is used to read in the MIDI files and transform the messages and events in each track into a more structured matrix, so that we could later construct input data and output data based on this matrix. It take one argument ```file```, the name and path of the MIDI file, and return an numpy array object with shape of (num_of_bear, range_of_notes=128, 2), the third dimension of 2 here means two boolean here: one indicates if the note is played, and the other indicates if the note is articulated. 
 
